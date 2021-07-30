@@ -1,7 +1,7 @@
 def log_in():
 	user_name = input("Type in your username: ")
 	password = input("Type in your password: ")
-	with open('details.txt') as f:
+	with open('accounts.txt') as f:
 		for line in f.readlines():
 			line = line.replace(' ', '')
 			line = line.replace('\n', '')
@@ -17,7 +17,7 @@ def log_in():
 def create_ac():
 	user_name = input("Choose your username: ")
 	password = input("Type in a strong password: ")
-	with open('details.txt', 'a') as f:
+	with open('accounts.txt', 'a') as f:
 		f.write(f"{user_name} - {password}\n")
 	print("Account created successfuly!!")
 
